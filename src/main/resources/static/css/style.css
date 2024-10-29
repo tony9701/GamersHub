@@ -32,7 +32,7 @@ body {
     align-items: center;
     padding: 10px;
     text-decoration: none;
-    color: aliceblue;
+    color: black;
 }
 
 .navbar a:hover {
@@ -44,7 +44,7 @@ body {
 .logo a {
     text-decoration: none;
     font-size: 2.8rem;
-    color: rgb(255, 255, 255);
+    color: black;
     font-family: "Rubik Wet Paint", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -53,7 +53,7 @@ body {
 .background {
     width: 100%;
     height:100vh;
-    background: url("/src/main/resources/static/images/bg.png") no-repeat;
+    background: url("/src/main/resources/static/images/bg2.jpg") no-repeat;
     background-position: center;
     filter: blur(8px);
 }
@@ -65,7 +65,7 @@ body {
     transform: translate(-50%, -50%);
     width: 75%;
     height: 660px;
-    background: url("/src/main/resources/static/images/bg.png");
+    background: url("/src/main/resources/static/images/bg2.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 60px;
@@ -73,11 +73,16 @@ body {
 
 .container .content {
     position: absolute;
+    padding: 7rem 5rem;
     top: 0;
     left: 0;
     background: brown;
     width: 58%;
     height: 100%;
+    color: black;
+    /* display: flex;
+    justify-content: space-between;
+    flex-direction: column; */
 }
 
 .container .logreg-box {
@@ -86,11 +91,9 @@ body {
     height: 100%;
 }
 
-.social-links {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: greenyellow;
+.social-links a {
+    font-size: 3rem;
+    color: white;
 }
 
 .content .logo {
@@ -98,5 +101,17 @@ body {
 }
 
 .content .text-info {
+    margin-bottom: 6rem;
+    font-size: 40px;
+    line-height: 3rem;
+}
+
+.content p {
     font-size: 20px;
+    margin: 20px 0;
+    margin-bottom: 7rem;
+}
+
+.content span {
+    font-size: 30px;
 }
