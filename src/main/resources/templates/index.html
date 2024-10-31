@@ -8,12 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="src\main\resources\static\js\main.js"></script>
-
+    <script src="../static/js/main.js"></script>
+    
     <title>Gamers Hub</title>
 </head>
 <body> 
-    
+    <script>
+        document.querySelectorAll('.input-box input').forEach(input => {
+    input.addEventListener('input', () => {
+        if (input.value) {
+            input.classList.add('has-content');
+        } else {
+            input.classList.remove('has-content');
+        }
+    });
+});
+    </script>
     <header class="header">
         <div class="logo"><a href="#">Gamers Hub</a></div>
         <nav class="navbar">
@@ -47,25 +57,25 @@
 
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-envelope' ></i></span>
-                        <input type="email" name="email" id="email" required>
-                        <label for="content-input">Email</label>
+                        <input type="email" name="email" id="email-input" required>
+                        <label for="email-input">Email</label>
                     </div>
 
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                        <input type="password" name="password" id="password" required>
+                        <input type="password" name="password" id="content-input" required>
                         <label for="content-input">Password</label>
                     </div>
 
                     <div class="remember-forgot">
                         <label>
-                            <input type="checkbox" name="remember-me" id="">Remember Me
+                            <input type="checkbox" name="remember-me" id="">Remember me
                         </label>
 
                         <a href="#" class="href">Forgot Password?</a>
                     </div>
 
-                    <button type="submit">Sign In</button>
+                    <button class="btn" type="submit">Sign In</button>
 
                     <div class="login-register">
                         <p>Don't have an account?
