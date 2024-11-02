@@ -121,7 +121,7 @@ body {
     font-size: 30px;
 }
 
-.logreg-box .form-box-login {
+.logreg-box .form-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,12 +132,12 @@ body {
     border-radius: 60px;
 }
 
-.form-box-login h2 {
+.form-box h2 {
     font-size: 42px;
     text-align: center;
 }
 
-.form-box-login .input-box {
+.form-box .input-box {
     position: relative;
     width: 340px;
     height: 50px;
@@ -179,7 +179,7 @@ body {
     font-size: 23px;
 }
 
-.form-box-login .remember-forgot {
+.form-box .remember-forgot {
     font-size: 14px;
     font-weight: 500;
     margin: -15px 0 15px;
@@ -229,4 +229,12 @@ body {
 
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+.form-box.register { /*register form*/
+   display: none;
+}
+
+.form-box.login { /*login form*/
+    /* display: none; */
 }
