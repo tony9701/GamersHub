@@ -26,19 +26,21 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
+    font-size: 18px;
 }
 
 .navbar a {
     align-items: center;
-    padding: 10px;
+    margin: 10px;
     text-decoration: none;
     color: black;
 }
 
 .navbar a:hover {
-    background: rgb(208, 113, 5);
+    background: transparent;
     border-radius: 20px;
     scale: 1.2;
+    font-weight: 500;
 }
 
 .logo a {
@@ -231,10 +233,21 @@ body {
     text-decoration: underline;
 }
 
-.form-box.register { /*register form*/
-   display: none;
+.login-register p {
+    margin-top: 6px;
 }
 
-.form-box.login { /*login form*/
-    /* display: none; */
+
+
+.form-box.register {
+    display: none;
+}
+
+.container .user-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    width: 42%;
+    height: 100%;
 }

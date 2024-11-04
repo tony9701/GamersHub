@@ -13,17 +13,7 @@
     <title>Gamers Hub</title>
 </head>
 <body> 
-    <script>
-        document.querySelectorAll('.input-box input').forEach(input => {
-    input.addEventListener('input', () => {
-        if (input.value) {
-            input.classList.add('has-content');
-        } else {
-            input.classList.remove('has-content');
-        }
-    });
-});
-    </script>
+    
     <header class="header">
         <div class="logo"><a href="#">Gamers Hub</a></div>
         <nav class="navbar">
@@ -50,71 +40,15 @@
                 <a href="#"><i class='bx bxl-github'></i></a> <!--github -->
             </div>
         </div>
-        <div class="logreg-box">
-            <div class="form-box login active">
-                <form action="#">
-                    <h2>Sign in</h2>
 
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-envelope' ></i></span>
-                        <input type="email" name="email" id="email-input" required>
-                        <label for="email-input">Email</label>
-                    </div>
-
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                        <input type="password" name="password" id="content-input" required>
-                        <label for="content-input">Password</label>
-                    </div>
-
-                    <div class="remember-forgot">
-                        <label>
-                            <input type="checkbox" name="remember-me" id="">Remember me
-                        </label>
-
-                        <a href="#" class="href">Forgot Password?</a>
-                    </div>
-
-                    <button class="btn" type="submit">Sign In</button>
-
-                    <div class="login-register">
-                        <p>Don't have an account?
-                            <a href="#" class="register-link" onclick="showRegister()">Sign up!</a>
-                        </p>
-                    </div>
-                </form>
+        <div class="user-info">
+            // TODO - user details 
+            <div class="user-picture">
+            
             </div>
 
-            <div class="form-box register">
-                <form action="#">
-                    <h2>Sign up</h2>
+            <div class="user-details">
 
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-envelope' ></i></span>
-                        <input type="email" name="email" id="email-input" required>
-                        <label for="email-input">Email</label>
-                    </div>
-
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                        <input type="password" name="password" id="content-input" required>
-                        <label for="content-input">Password</label>
-                    </div>
-
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                        <input type="password" name="password" id="content-input" required>
-                        <label for="content-input">Confirm Password</label>
-                    </div>
-
-                    <button class="btn" type="submit">Sign Up!</button>
-
-                    <div class="login-register">
-                        <p>Already have an account?
-                            <a href="#" class="register-link" onclick="showLogin()">Sign in!</a>
-                        </p>
-                    </div>
-                </form>
             </div>
 
         </div>
