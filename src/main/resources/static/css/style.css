@@ -251,3 +251,57 @@ body {
     width: 42%;
     height: 100%;
 }
+
+.contact-form {
+    position: fixed; /* Keeps the form fixed on the viewport */
+    top: 50%; /* Centers the form vertically */
+    left: 50%; /* Centers the form horizontally */
+    transform: translate(-50%, -50%); /* Adjusts to ensure it's centered */
+    display: flex;
+    flex-direction: column; /* Stacks form elements vertically */
+    align-items: center; /* Centers form elements horizontally */
+    padding: 20px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border-radius: 15px;
+    backdrop-filter: blur(6px); /* Gives a frosted-glass effect */
+    color: rgb(0, 0, 0); /* Ensures text is visible */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full width of the form container */
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); /* Matches the overall style */
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+
+.contact-form ::placeholder {
+    color: black;
+}
+
+.contact-form button {
+    background-color: rgb(208, 113, 5); /* Matches the button style in your existing CSS */
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.contact-form button:hover {
+    transform: scale(1.04);
+}
+
+.contact-form h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 45px;
+}
