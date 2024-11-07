@@ -327,3 +327,11 @@ body {
     margin: 30px;
     font-size: 45px;
 }
+
+.input-box .icon-contact {
+    position: absolute;
+    left: 0;
+    margin: 8px 0 0 50px;
+    font-size: 22px;
+    
+}
