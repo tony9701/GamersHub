@@ -307,4 +307,5 @@ body {
 
 .contact-form textarea {
     resize: none;
+    height: 9rem;
 }
