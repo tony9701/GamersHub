@@ -253,29 +253,28 @@ body {
 }
 
 .contact-form {
-    position: fixed; /* Keeps the form fixed on the viewport */
-    top: 50%; /* Centers the form vertically */
-    left: 50%; /* Centers the form horizontally */
-    transform: translate(-50%, -50%); /* Adjusts to ensure it's centered */
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     display: flex;
-    flex-direction: column; /* Stacks form elements vertically */
-    align-items: center; /* Centers form elements horizontally */
+    flex-direction: column; 
+    align-items: center; 
     padding: 20px;
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
     border-radius: 15px;
-    backdrop-filter: blur(6px); /* Gives a frosted-glass effect */
-    color: rgb(0, 0, 0); /* Ensures text is visible */
+    backdrop-filter: blur(12px); 
+    color: rgb(0, 0, 0); 
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%; /* Full width of the form container */
+    width: 100%; 
     margin-bottom: 15px;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.2); /* Matches the overall style */
+    background-color: rgba(255, 255, 255, 0.2);
     color: rgb(0, 0, 0);
     outline: none;
 }
@@ -285,7 +284,7 @@ body {
 }
 
 .contact-form button {
-    background-color: rgb(208, 113, 5); /* Matches the button style in your existing CSS */
+    background-color: rgb(208, 113, 5); 
     width: 100%;
     margin: 10px 0;
     border: none;
