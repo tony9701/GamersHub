@@ -12,16 +12,10 @@
     
     <title>Gamers Hub</title>
 </head>
-<body> 
-    
-    <header class="header">
-        <div class="logo"><a href="#">Gamers Hub</a></div>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Lobby</a>
-            <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
-        </nav>
+<body>
+
+    <header>
+        <div th:replace="~{fragments/navbar::navbar(activeLink=${''})}"></div>
     </header>
 
     <div class="background"></div>
