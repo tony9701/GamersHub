@@ -71,7 +71,8 @@
 
             <div class="form-box register">
                 <form    th:method="POST"
-                         th:action="@{/register}">
+                         th:action="@{/register}"
+                         th:object="${registerUserDTO}">
                     <h2>Sign up</h2>
 
                     <div class="input-box">
@@ -88,8 +89,8 @@
 
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                        <input type="confirm-password" name="confirm-password" id="confirm-password" required>
-                        <label for="confirm-password">Confirm Password</label>
+                        <input type="confirmPassword" name="confirmPassword" id="confirmPassword" required>
+                        <label for="confirmPassword">Confirm Password</label>
                     </div>
 
                     <button class="btn" type="submit">Sign Up!</button>
