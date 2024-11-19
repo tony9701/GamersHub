@@ -1,4 +1,4 @@
-package com.GamersHub.model.repository;
+package com.GamersHub.repository;
 
 import com.GamersHub.model.entity.Room;
 import jdk.jfr.Registered;

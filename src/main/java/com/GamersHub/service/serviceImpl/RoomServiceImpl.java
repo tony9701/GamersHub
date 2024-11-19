@@ -1,6 +1,6 @@
-package com.GamersHub.model.service.serviceImpl;
+package com.GamersHub.service.serviceImpl;
 
-import com.GamersHub.model.service.RoomService;
+import com.GamersHub.service.RoomService;
 import org.springframework.stereotype.Service;
 
 @Service

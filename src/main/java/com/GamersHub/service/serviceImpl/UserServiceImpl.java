@@ -1,6 +1,6 @@
-package com.GamersHub.model.service.serviceImpl;
+package com.GamersHub.service.serviceImpl;
 
-import com.GamersHub.model.service.UserService;
+import com.GamersHub.service.UserService;
 import org.springframework.stereotype.Service;
 
 @Service

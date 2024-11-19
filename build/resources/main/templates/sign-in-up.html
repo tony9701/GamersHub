@@ -36,7 +36,7 @@
         </div>
         <div class="logreg-box">
             <div class="form-box login active">
-                <form action="#">
+                <form>
                     <h2>Sign in</h2>
 
                     <div class="input-box">
@@ -70,12 +70,13 @@
             </div>
 
             <div class="form-box register">
-                <form action="#">
+                <form    th:method="POST"
+                         th:action="@{/register}">
                     <h2>Sign up</h2>
 
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-envelope' ></i></span>
-                        <input type="email" name="email" id="email-input" required>
+                        <input type="email" name="email" id="email-input-reg" required>
                         <label for="email-input">Email</label>
                     </div>
 

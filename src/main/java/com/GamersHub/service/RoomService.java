@@ -1,4 +1,4 @@
-package com.GamersHub.model.service;
+package com.GamersHub.service;
 
 import org.springframework.stereotype.Service;
 

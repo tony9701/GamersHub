@@ -1,4 +1,4 @@
-package com.GamersHub.model.repository;
+package com.GamersHub.repository;
 
 import com.GamersHub.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
