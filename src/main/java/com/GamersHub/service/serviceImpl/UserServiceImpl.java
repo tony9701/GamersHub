@@ -26,9 +26,8 @@ public class UserServiceImpl implements UserService {
 
 
     private User map(registerUserDTO registerUserDTO) {
-        User map = modelMapper.map(registerUserDTO, User.class);
-        System.out.printf("");
-        return map;
+        User user = modelMapper.map(registerUserDTO, User.class);
+        return user;
         //TODO finish the register method
 
         //TODO encode the password and set it
