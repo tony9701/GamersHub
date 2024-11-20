@@ -1,4 +1,4 @@
-package com.GamersHub.service.serviceImpl;
+package com.GamersHub.service.impl;
 
 import com.GamersHub.service.RoomService;
 import org.springframework.stereotype.Service;

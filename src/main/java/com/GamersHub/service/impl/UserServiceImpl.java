@@ -1,4 +1,4 @@
-package com.GamersHub.service.serviceImpl;
+package com.GamersHub.service.impl;
 
 import com.GamersHub.model.dto.registerUserDTO;
 import com.GamersHub.model.entity.User;
