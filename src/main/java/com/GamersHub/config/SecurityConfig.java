@@ -1,6 +1,7 @@
 package com.GamersHub.config;
 
 import com.GamersHub.repository.UserRepository;
+import com.GamersHub.service.impl.GamersHubUserDetailsService;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -56,8 +57,8 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsServiceImpl userDetailsService(UserRepository userRepository) {
-        return new UserDetailsServiceImpl(userRepository);
+    public GamersHubUserDetailsService userDetailsService(UserRepository userRepository) {
+        return new GamersHubUserDetailsService(userRepository);
     }
 
 

@@ -1,12 +1,12 @@
 package com.GamersHub.service.impl;
-import com.GamersHub.model.entity.User;
+import com.GamersHub.model.entity.UserEntity;
 import com.GamersHub.repository.UserRepository;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.List;
-import java.util.Optional;
 
 public class GamersHubUserDetailsService implements UserDetailsService {
 
@@ -24,15 +24,15 @@ public class GamersHubUserDetailsService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("User with email " + email + " not found!"));
     }
 
-    private static UserDetails map(User user) {
+    private static UserDetails map(UserEntity user) {
 
 
-//        org.springframework.security.core.userdetails.User.withUsername(user.getEmail())
-//                .password(user.getPassword())
-//                .authorities(List.of())
-//                .disabled(false)
-//                .build();
+        return User.withUsername(user.getEmail())
+                .password(user.getPassword())
+                .authorities(List.of()) //TODO add authorities
+                .disabled(false)
+                .build();
 
-//TODO finish the config
     }
 }
+

@@ -1,7 +1,7 @@
 package com.GamersHub.service.impl;
 
 import com.GamersHub.model.dto.registerUserDTO;
-import com.GamersHub.model.entity.User;
+import com.GamersHub.model.entity.UserEntity;
 import com.GamersHub.repository.UserRepository;
 import com.GamersHub.service.UserService;
 import org.modelmapper.ModelMapper;
@@ -25,8 +25,8 @@ public class UserServiceImpl implements UserService {
 
 
 
-    private User map(registerUserDTO registerUserDTO) {
-        User user = modelMapper.map(registerUserDTO, User.class);
+    private UserEntity map(registerUserDTO registerUserDTO) {
+        UserEntity user = modelMapper.map(registerUserDTO, UserEntity.class);
         return user;
         //TODO finish the register method
 
