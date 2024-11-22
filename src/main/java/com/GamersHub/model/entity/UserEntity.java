@@ -20,7 +20,6 @@ public class UserEntity extends BaseEntity {
     private String email;
 
     @Column(nullable = false)
-    @Size(min = 6, max = 20)
     private String password;
 
     @Column(name = "first_name")
