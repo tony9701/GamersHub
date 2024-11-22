@@ -25,7 +25,7 @@ public class SecurityConfig {
                                         // all static resources to "common locations" (css, images, js) are available to anyone
                                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                                         // some more resources for all users
-                                        .requestMatchers("").permitAll()
+                                        .requestMatchers("/", "/register", "/login").permitAll()
                                         // all other URL-s should be authenticated.
                                         .anyRequest()
                                         .authenticated()
@@ -33,7 +33,7 @@ public class SecurityConfig {
                 .formLogin(formLogin ->
                         formLogin
                                 // Where is our custom login form?
-                                .loginPage("")
+                                .loginPage("/login")
                                 // what is the name of the username parameter in the Login POST request?
                                 .usernameParameter("email")
                                 // what is the name of the password parameter in the Login POST request?
@@ -41,7 +41,7 @@ public class SecurityConfig {
                                 // What will happen if the login is successful
                                 .defaultSuccessUrl("/", true)
                                 // What will happen if the login fails
-                                .failureUrl("")
+                                .failureUrl("/error")
                 )
                 .logout(
                         logout ->
@@ -62,8 +62,8 @@ public class SecurityConfig {
     }
 
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
 }
