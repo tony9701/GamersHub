@@ -21,7 +21,13 @@
       <a href="#">Lobby</a>
       <a href="contact-us">Contact Us</a>
       <a href="about-us">About Us</a>
+      <form th:action="@{/logout}" th:method="POST" class="logout-form">
+        <button class="btn_logout" type="submit">Logout</button>
+      </form>
     </nav>
+
+
+
   </header>
 </body>
 </html>
