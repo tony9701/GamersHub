@@ -22,11 +22,22 @@ body {
     z-index: 100;
 }
 
+li {
+    list-style: none;
+}
+
 .navbar {
     display: flex;
     align-items: center;
     gap: 2rem;
     font-size: 18px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .navbar a {

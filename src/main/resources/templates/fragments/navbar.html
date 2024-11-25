@@ -17,7 +17,7 @@
 <header th:fragment="navbar(activeLink)" class="header">
     <div class="logo"><a href="#">Gamers Hub</a></div>
     <nav class="navbar">
-        <ul>
+        <ul class="links">
             <li>
                 <a href="/">Home</a>
             </li>
@@ -30,12 +30,15 @@
             <li>
                 <a href="about-us">About Us</a>
             </li>
-            <li>
-            <form th:action="@{/logout}" th:method="POST" class="logout-form">
-                <button class="btn_logout" type="submit">Logout</button>
-            </form>
-            </li>
         </ul>
+        <div class="action-buttons">
+            <li>
+                <form th:action="@{/logout}" th:method="POST" class="logout-form">
+                    <button class="btn_logout" type="submit">Logout</button>
+                </form>
+            </li>
+        </div>
+
     </nav>
 
 
