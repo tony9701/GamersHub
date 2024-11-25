@@ -25,7 +25,7 @@ public class SecurityConfig {
                                         // all static resources to "common locations" (css, images, js) are available to anyone
                                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                                         // some more resources for all users
-                                        .requestMatchers("/", "/register", "/login").permitAll()
+                                        .requestMatchers("/", "/register", "/login", "/about-us", "/contact-us").permitAll()
                                         // all other URL-s should be authenticated.
                                         .anyRequest()
                                         .authenticated()
