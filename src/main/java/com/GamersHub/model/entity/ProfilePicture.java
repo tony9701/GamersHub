@@ -10,6 +10,6 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table
-public class Picture extends BaseEntity {
-
+public class ProfilePicture extends BaseEntity {
+    
 }
