@@ -2,6 +2,7 @@ package com.GamersHub.model.entity;
 
 import com.GamersHub.model.entity.baseEntity.BaseEntity;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,5 +12,7 @@ import lombok.Setter;
 @Entity
 @Table
 public class ProfilePicture extends BaseEntity {
-    
+
+    @OneToOne(mappedBy = "profilePicture")
+    private UserEntity user;
 }
