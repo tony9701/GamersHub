@@ -5,8 +5,8 @@ import org.springframework.security.core.userdetails.User;
 
 import java.util.Collection;
 
-public class UserDetails extends User {
-    public UserDetails(String username, String password, Collection<? extends GrantedAuthority> authorities) {
+public class GamersHubUserDetails extends User {
+    public GamersHubUserDetails(String username, String password, Collection<? extends GrantedAuthority> authorities) {
         super(username, password, authorities);
     }
 }
