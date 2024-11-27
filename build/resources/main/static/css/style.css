@@ -54,6 +54,45 @@ li {
     font-weight: 500;
 }
 
+.dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    top: 80px;
+    width: 300px;
+    height: 0px;
+    background: #babec0;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    display: none;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown_menu.open {
+    height: 345px;
+}
+
+.profile-pic img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
 .btn_logout {
     --color: #00A97F;
     padding: 0.8em 1.7em;
@@ -201,7 +240,7 @@ li {
 }
 
 .form-box h2 {
-    font-size: 42px;
+    font-size: 52px;
     text-align: center;
 }
 
@@ -219,6 +258,7 @@ li {
     background: transparent;
     border: none;
     outline: none;
+    font-size: 16px;
 }
 
 .input-box label {
@@ -227,24 +267,19 @@ li {
     left: 0;
     transform: translateY(-50%);
     transition: .5s ease;
-    
 }
 
-.input-box input:focus~label {
-    top: -5px;
-}
-
-.input-box input.has-content ~ label {
-    top: -5px;
-    font-size: 0.85em;
-    color: #333;
-}
 
 .input-box .icon {
     position: absolute;
     top: 13px;
     right: 0;
     font-size: 23px;
+}
+
+input::placeholder {
+    color: black;
+    font-size: 16px;
 }
 
 .form-box .remember-forgot {
@@ -303,11 +338,6 @@ li {
     margin-top: 6px;
 }
 
-
-
-.form-box.register {
-    display: none;
-}
 
 .container .user-info {
     position: absolute;
@@ -399,5 +429,6 @@ li {
     left: 0;
     margin: 8px 0 0 50px;
     font-size: 22px;
-    
+
+
 }

@@ -20,15 +20,16 @@ public class RegisterController {
 
     @GetMapping("/register")
     public String registerView() {
-        System.out.print("TEST-VIEW");
-        return "sign-in";
+        if (userService.isAuthenticated()) {
+            return "redirect:/";
+        }
+
+        return "register";
     }
 
     @PostMapping("/register")
     public String register(@Valid registerUserDTO registerUserDTO, RedirectAttributes redirectAttributes) {
-        System.out.print("TEST");
         userService.registerUser(registerUserDTO);
-        System.out.print("TEST if registered");
-        return "sign-in";
+        return "redirect:/login";
     }
 }
