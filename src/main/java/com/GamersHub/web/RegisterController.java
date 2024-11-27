@@ -21,7 +21,7 @@ public class RegisterController {
     @GetMapping("/register")
     public String registerView() {
         System.out.print("TEST-VIEW");
-        return "sign-in-up";
+        return "sign-in";
     }
 
     @PostMapping("/register")
@@ -29,6 +29,6 @@ public class RegisterController {
         System.out.print("TEST");
         userService.registerUser(registerUserDTO);
         System.out.print("TEST if registered");
-        return "sign-in-up";
+        return "sign-in";
     }
 }

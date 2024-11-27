@@ -65,46 +65,11 @@
 
                 <div class="login-register">
                     <p>Don't have an account?
-                        <a href="#" class="register-link" onclick="showRegister()">Sign up!</a>
+                        <a th:href="@{/register}" class="register-link">Sign up!</a>
                     </p>
                 </div>
             </form>
         </div>
-
-        <div class="form-box register">
-            <form th:method="POST"
-                  th:action="@{/register}"
-                  th:object="${registerUserDTO}">
-                <h2>Sign up</h2>
-
-                <div class="input-box">
-                    <span class="icon"><i class='bx bxs-envelope'></i></span>
-                    <input type="email" name="email" id="email-input-reg" required>
-                    <label for="email-input">Email</label>
-                </div>
-
-                <div class="input-box">
-                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                    <input type="password" name="password" id="password" required>
-                    <label for="password">Password</label>
-                </div>
-
-                <div class="input-box">
-                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                    <input type="confirmPassword" name="confirmPassword" id="confirmPassword" required>
-                    <label for="confirmPassword">Confirm Password</label>
-                </div>
-
-                <button class="btn" type="submit">Sign Up!</button>
-
-                <div class="login-register">
-                    <p>Already have an account?
-                        <a href="#" class="register-link" onclick="showLogin()">Sign in!</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-
     </div>
 </div>
 

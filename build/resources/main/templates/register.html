@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="/js/main.js"></script>
+
+    <title>Gamers Hub</title>
+</head>
+<body>
+
+<header>
+    <div th:replace="~{fragments/navbar::navbar(activeLink=${''})}"></div>
+</header>
+
+<div class="background"></div>
+<div class="container">
+    <div class="content">
+
+        <div class="text-info">
+            <h2>Welcome!<br><span>To Our New Website.</span></h2>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fugiat cum magnam quod rerum, quos quae
+            laudantium facere obcaecati, magni sit expedita consequuntur.
+        </p>
+
+        <div class="social-links">
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a> <!--linked in -->
+            <a href="#"><i class='bx bxl-github'></i></a> <!--github -->
+        </div>
+    </div>
+    <div class="logreg-box">
+
+        <div class="form-box register">
+            <form th:method="POST"
+                  th:action="@{/register}"
+                  th:object="${registerUserDTO}">
+                <h2>Sign up</h2>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" name="email" id="email-input-reg" required>
+                    <label for="email-input-reg">Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="confirmPassword" name="confirmPassword" id="confirmPassword" required>
+                    <label for="confirmPassword">Confirm Password</label>
+                </div>
+
+                <button class="btn" type="submit">Sign Up!</button>
+
+                <div class="login-register">
+                    <p>Already have an account?
+                        <a th:href="@{/login}" class="register-link">Sign in!</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
