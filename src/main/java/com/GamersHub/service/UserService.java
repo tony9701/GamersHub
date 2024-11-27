@@ -7,4 +7,8 @@ import org.springframework.stereotype.Service;
 @Service
 public interface UserService {
     void registerUser(registerUserDTO registerUserDTO);
+
+    boolean isAuthenticated();
+
+    String getCurrentUsername();
 }
