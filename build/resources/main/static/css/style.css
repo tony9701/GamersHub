@@ -56,17 +56,18 @@ li {
 
 .dropdown_menu {
     position: absolute;
-    right: 2rem;
+    right: 5rem;
     top: 80px;
     width: 300px;
-    height: 0px;
-    background: #babec0;
+    height: auto;
+    background: transparent;
     backdrop-filter: blur(15px);
+    border: 1px solid;
     border-radius: 20px;
     overflow: hidden;
     display: none;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 2;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2000;
 }
 
 .dropdown_menu li {
@@ -81,9 +82,10 @@ li {
     text-align: center;
 }
 
-.dropdown_menu.open {
-    height: 345px;
+.dropdown_menu.show {
+    display: block;
 }
+
 
 .profile-pic img {
     width: 50px;
@@ -91,6 +93,10 @@ li {
     border: 2px solid;
     border-radius: 30px;
     cursor: pointer;
+}
+
+.profile-pic.show {
+    color: white;
 }
 
 .btn_logout {
