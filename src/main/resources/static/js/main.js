@@ -1,27 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
+
     const avatarButton = document.getElementById('profile-pic');
-    // const toggleBtnIcon = document.querySelector('.toggle_btn i');
     const dropdownMenu = document.getElementById('dropdownMenu');
+    const profilePic = document.getElementById('profile-pic');
 
     // Toggle dropdown menu on click
-    avatarButton.addEventListener('click', () => {
-        dropdownMenu.style.display =
-            dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    avatarButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        dropdownMenu.classList.toggle('show')
+    });
+
+    avatarButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        profilePic.classList.toggle('show')
     });
 
 // Close the dropdown if clicked outside
     document.addEventListener('click', (event) => {
         if (!avatarButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.style.display = 'none';
+            dropdownMenu.classList.remove("show");
+            profilePic.classList.remove('show');
         }
     });
-
-    // toggleBtn.onclick = function () {
-    //     dropDownMenu.classList.toggle('open');
-    //     const isOpen = dropDownMenu.classList.contains('open');
-    //
-    //     // toggleBtnIcon.classList = isOpen
-    //     //     ? 'fa-solid fa-xmark'
-    //     //     : 'fa-solid fa-bars';
-    // };
 });
